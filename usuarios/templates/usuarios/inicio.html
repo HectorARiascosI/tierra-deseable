@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <!-- Añadir las hojitas cayendo en la parte superior de la página -->
+    <div class="hojitas"></div>
+
+
+    <div class="container mt-5 contenedor-principal">
+        
+        <!-- Título de bienvenida -->
+        <h1 class="bienvenida-header">Bienvenido(s) a Tierra Deseable</h1>
+        <p class="text-center">Seleccione una opción para continuar:</p>
+
+        <!-- Botones -->
+        <div class="d-flex flex-column align-items-center w-100">
+            <a href="{% url 'login' %}" class="btn btn-principal">Inicio de sesión (principales)</a>
+            <a href="{% url 'registro' %}" class="btn btn-secundario">Registro de miembros (solo nuevos)</a>
+        </div>
+
+        <!-- Video de fondo -->
+        <div class="video-background">
+            <video autoplay muted loop id="background-video">
+                <source src="{% static 'videos/nubes.mp4' %}" type="video/mp4">
+                Tu navegador no soporta este tipo de video.
+            </video>
+        </div>
+    </div>
+{% endblock %}
+
+

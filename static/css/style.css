@@ -1,0 +1,243 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff; /* Fondo claro */
+    position: relative; /* Necesario para las hojitas cayendo */
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
+    min-height: 100vh; /* Asegura que el cuerpo ocupe todo el alto de la pantalla */
+    margin: 0;
+}
+
+
+/* Estilo para el video de fondo */
+.video-background {
+    position: fixed; /* Fija el video en la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: 100%; /* Ocupa todo el alto de la pantalla */
+    z-index: -1; /* Coloca el video detrás del contenido */
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que el video cubra todo el fondo */
+    filter: brightness(100%); /* Oscurece el video para mejorar la visibilidad del texto */
+}
+
+/* Estilo para el título general (Bienvenido(s) a Tierra Deseable) */
+.bienvenida-header {
+    font-size: 2rem; /* Tamaño del texto para "Bienvenidos" */
+    font-family: 'Arial', sans-serif;
+    color: #333030; /* Color del texto para que resalte sobre el video */
+    text-align: center; /* Centrado */
+    font-weight: bold; /* Texto en negrita */
+    margin-top: 20px; /* Separación desde el top */
+    
+}
+
+/* Estilo para el título en el header (TIERRA DESEABLE) */
+.titulo-header {
+    font-size: 4rem; /* Tamaño del texto */
+    font-family: 'Arial', sans-serif; /* Fuente agradable */
+    color: #fffb19; /* Color blanco para destacar sobre el fondo */
+    text-align: center; /* Centrado */
+    font-weight: bold; /* Texto en negrita */
+    animation: palpitacion 2s ease-in-out infinite; /* Animación de palpitación */
+    margin: 0; /* Eliminar márgenes del header */
+}
+
+/* Animación de palpitación (latido) */
+@keyframes palpitacion {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    50% {
+        transform: scale(1.05); /* Aumento moderado */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+}
+
+/* Estilo para los botones de inicio */
+.btn-principal {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco */
+    background-color: #228B22 !important; /* Verde opaco */
+    border: 2px solid #196619 !important; /* Borde verde oscuro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Animación suave */
+    opacity: 1 !important; /* Sin transparencia */
+}
+
+.btn-secundario {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #ffffff; /* Texto blanco */
+    background-color: #228B22 !important; /* Verde opaco */
+    border: 2px solid #196619 !important; /* Borde verde oscuro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para darle profundidad */
+    transition: transform 0.2s ease, background-color 0.2s ease; /* Animación suave */
+    opacity: 1 !important; /* Sin transparencia */
+}
+
+
+/* Estilo para los botones de login*/
+
+
+
+/* Efecto al pasar el mouse */
+.btn-principal:hover {
+    background-color: #0e4d1e; /* Oscurece el color al pasar el mouse */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+.btn-secundario:hover {
+    background-color: #2E8B57; /* Verde más claro */
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+/* Efecto al hacer clic */
+.btn-principal:active,
+.btn-secundario:active {
+    transform: scale(0.95); /* Reduce un poco el tamaño para simular un clic */
+}
+
+/* Header con espacio para logo */
+header {
+    background-color: rgba(139, 69, 19, 0.7); /* Fondo café transparente */
+    padding: 20px 40px; /* Márgenes internas */
+    margin: 20px 90px; /* Márgenes externas */
+    display: flex; /* Flexbox para alinear elementos */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    border-radius: 20px; /* Esquinas redondeadas */
+    box-shadow: 0 0 0 3px black, 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Clase para el logo */
+header .logo {
+    position: absolute; /* Posiciona el logo */
+    left: 130px; /* Ajusta el desplazamiento */
+    width: 95px; /* Tamaño del logo */
+    height: auto;
+    border-radius: 15px; /* Esquinas redondeadas */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra detrás */
+    border: 2px solid #fff; /* Marco blanco */
+}
+
+/* Estilo para el footer */
+.footer {
+    background-color: rgba(51, 104, 51, 0.9); /* Fondo verde oscuro */
+    color: #000;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    position: relative; /* Cambia de fijo a relativo */
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 10; /* Por encima de otros elementos */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    border-radius: 20px; /* Opcional: puede quitar las esquinas redondeadas */
+}
+.footer p {
+    margin: 0; /* Sin márgenes adicionales */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .contenedor-principal {
+        padding: 15px;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+}
+/* Estilos para el contenedor principal */
+/* Contenedor principal */
+.contenedor-principal {
+    background: linear-gradient(to bottom right, rgba(112, 165, 112, 0.8), rgba(173, 199, 173, 0.4));
+    max-width: 400px !important;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px black, 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto; /* Agrega espacio superior e inferior */
+    min-height: calc(100vh - 300px); /* Empuja el footer hacia abajo */
+}
+
+/* Estilos para el contenedor secundario */
+/* Estilos para el contenedor secundario */
+.contenedor-secundario {
+    background: linear-gradient(to bottom right, rgba(112, 165, 112, 0.8), rgba(173, 199, 173, 0.4)); /* Gradiente */
+    max-width: 600px !important; /* Ancho máximo del contenedor ajustado */
+    padding: 30px; /* Espaciado interno */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0 0 0 3px black, 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra moderada */
+    display: flex; /* Flexbox para alineación interna */
+    flex-direction: column; /* Elementos en columna */
+    justify-content: center; /* Centrado vertical */
+    align-items: center; /* Centrado horizontal */
+    margin: 50px auto; /* Centra horizontalmente y agrega espacio superior */
+}
+
+/* Espaciado para los elementos del formulario */
+form .mb-3 {
+    margin-bottom: 20px; /* Más espaciado entre campos */
+}
+
+/* Botones */
+form button, .btn-secondary {
+    margin-top: 10px; /* Espaciado superior */
+    padding: 10px 20px; /* Botones más amplios */
+}
+
+
+
+.hoja {
+    position: absolute;
+    top: -10%; /* Genera hojas fuera de la vista inicial en la parte superior */
+    left: 0;
+    width: 50px; /* Tamaño de las hojas */
+    height: 50px;
+    background-image: url('../images/hojas.png'); /* Ruta de la imagen */
+    background-size: contain; /* Ajusta la imagen al tamaño del div */
+    background-repeat: no-repeat;
+    animation: falling linear infinite; /* Usa la animación */
+    pointer-events: none; /* Evita que interfieran con el mouse */
+    z-index: 100; /* Mantén las hojas sobre otros elementos */
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg); /* Caen hasta fuera de la vista */
+    }
+}

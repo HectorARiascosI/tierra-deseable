@@ -1,0 +1,110 @@
+/* Estilos generales para el cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f8ff;  /* Fondo claro */
+    position: relative;  /* Necesario para las hojitas cayendo */
+}
+
+/* Estilo para el título */
+h1 {
+    color: #333;
+}
+
+/* Estilo para el título en el header (TIERRA DESEABLE) */
+.titulo-header {
+    font-size: 4rem;  /* Tamaño del texto */
+    font-family: 'Arial', sans-serif;  /* Fuente agradable */
+    color: #fff;  /* Color blanco para destacar sobre el fondo */
+    text-align: center;  /* Centrado */
+    font-weight: bold;  /* Texto en negrita */
+    animation: palpitacion 1s infinite;  /* Animación de palpitación */
+    margin: 0;  /* Eliminar márgenes del header */
+}
+
+/* Animación de palpitación (latido) */
+@keyframes palpitacion {
+    0% {
+        transform: scale(1); /* Tamaño normal */
+    }
+    25% {
+        transform: scale(1.1); /* Crece un poco */
+    }
+    50% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+    75% {
+        transform: scale(1.1); /* Crece un poco más */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+}
+
+/* Estilo para los botones */
+.btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Efecto de hojitas cayendo */
+.hojitas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    pointer-events: none;  /* Para que las hojas no interfieran con el contenido */
+    z-index: 1;  /* Aseguramos que las hojas caigan sobre el contenido */
+}
+
+.hoja {
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    animation: caer 5s infinite linear;
+    opacity: 0;
+}
+
+@keyframes caer {
+    0% {
+        transform: translateY(-100px) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Hacer que las hojas caigan desde diferentes puntos */
+.hoja:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.hoja:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.hoja:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.hoja:nth-child(4) {
+    left: 70%;
+    animation-delay: 3s;
+}
