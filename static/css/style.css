@@ -42,7 +42,7 @@ body {
 
 /* Estilo para el título en el header (TIERRA DESEABLE) */
 .titulo-header {
-    font-size: 4rem; /* Tamaño del texto */
+    font-size: 3.5rem; /* Tamaño del texto */
     font-family: 'Arial', sans-serif; /* Fuente agradable */
     color: #fffb19; /* Color blanco para destacar sobre el fondo */
     text-align: center; /* Centrado */
@@ -123,23 +123,26 @@ body {
 header {
     background-color: rgba(139, 69, 19, 0.7); /* Fondo café transparente */
     padding: 20px 40px; /* Márgenes internas */
-    margin: 20px 90px; /* Márgenes externas */
+    margin: 0; /* Eliminar márgenes externas */
     display: flex; /* Flexbox para alinear elementos */
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: space-between; /* Espaciado entre el logo y el título */
     align-items: center; /* Centra verticalmente */
     border-radius: 20px; /* Esquinas redondeadas */
     box-shadow: 0 0 0 3px black, 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    position: sticky; /* Fija el header al scroll */
+    top: 0; /* Asegura que permanezca en la parte superior */
+    z-index: 1000; /* Coloca el header por encima de otros elementos */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
 }
 
 /* Clase para el logo */
 header .logo {
-    position: absolute; /* Posiciona el logo */
-    left: 130px; /* Ajusta el desplazamiento */
-    width: 95px; /* Tamaño del logo */
+    width: 80px; /* Tamaño ajustado del logo */
     height: auto;
     border-radius: 15px; /* Esquinas redondeadas */
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra detrás */
     border: 2px solid #fff; /* Marco blanco */
+    margin-left: 20px; /* Espaciado del logo */
 }
 
 /* Estilo para el footer */
