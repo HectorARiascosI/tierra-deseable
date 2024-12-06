@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&)h##&dq$n6#@8zqa&3(l5isuu++m+o=454r-^f^o(7m#vu+*-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['https://tierra-deseable.onrender.com',]
 
